@@ -55,10 +55,33 @@ namespace NRKernal.NRExamples
                 string timeStamp = Time.time.ToString().Replace(".", "").Replace(":", "");
                 string filename = string.Format("Nreal_Record_{0}.mp4", timeStamp);
                 return Path.Combine(Application.persistentDataPath, filename);
+                //return Path.Combine("/storage/emulated/0/Nreal/", filename);
             }
         }
 
         GalleryDataProvider galleryDataTool;
+
+        /*void Update()
+        {
+            if (NRInput.GetButtonDown(ControllerButton.TRIGGER))
+            {
+                if (m_VideoCapture == null)
+                {
+                    CreateVideoCapture(() =>
+                    {
+                        StartVideoCapture();
+                    });
+                }
+                else if (m_VideoCapture.IsRecording)
+                {
+                    this.StopVideoCapture();
+                }
+                else
+                {
+                    this.StartVideoCapture();
+                }
+            }
+        }*/
 
         void Awake()
         {

@@ -10,6 +10,8 @@ namespace pointcloud_nreal
         private StreamWriter verticesWriter;
         List<Vector3> verticesData;
         Matrix4x4 matrix4x4;
+        List<Vector2> imageDataIn;
+        List<Vector4> imageDataOut;
 
         public List<Vector3> createVerticesData(List<Vector3> verticesData)
         {
@@ -43,6 +45,15 @@ namespace pointcloud_nreal
             verticesWriter.Close();
 
             return verticesData;
+        }
+
+        public List<Vector4> createImageData(List<Vector2> imageDataIn)
+        {
+            List<Vector2> verticesDataTemp = new List<Vector2>();
+
+            Vector4 imageDataOutTemp = new Vector4(0f, 0f, 0f, 0f);
+
+            return imageDataOut;
         }
 
         private Vector3 multiplyVerticesWithMatrix4x4(Matrix4x4 matrix4x4, Vector3 vertex)

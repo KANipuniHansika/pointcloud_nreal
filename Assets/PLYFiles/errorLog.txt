@@ -1,0 +1,22 @@
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed UpdateBoundingBox :Index was outside the bounds of the array.
+Failed CreateBoundingBoxMesh :There is no 'MeshFilter' attached to the "GenerateBoxes" game object, but a script is trying to access it.
+You probably need to add a MeshFilter to the game object "GenerateBoxes". Or your script needs to check if the component is attached before using it.
+Failed InitBoundingBox :Object reference not set to an instance of an object
+Failed InitBoundingBox :Object reference not set to an instance of an object
+Failed InitBoundingBox :Object reference not set to an instance of an object
+Failed InitBoundingBox :Object reference not set to an instance of an objectFailed InitBoundingBox :Object reference not set to an instance of an object

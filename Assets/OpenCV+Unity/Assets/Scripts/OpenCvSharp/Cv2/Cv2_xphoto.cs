@@ -17,5 +17,6 @@ namespace OpenCvSharp
 
             NativeMethods.xphoto_balanceWhite(src.CvPtr, dst.CvPtr);
         }
+
     }
 }

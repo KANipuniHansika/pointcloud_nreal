@@ -92,13 +92,18 @@ namespace OpenCvSharp {
 			return PixelsToMat(pixels32, texture.width, texture.height, parameters.FlipVertically, parameters.FlipHorizontally, parameters.RotationAngle);
 		}
 
-		/// <summary>
-		/// Converts Unity Texture2D to OpenCV Mat
-		/// </summary>
-		/// <returns>New mat</returns>
-		/// <param name="texture">Unity texture</param>
-		/// <param name="parameters">Conversion parameters</param>
-		public static Mat TextureToMat(WebCamTexture texture, TextureConversionParams parameters = null)
+        internal static Mat TextureToMat(object targetTexture, TextureConversionParams targetTextureparams)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Converts Unity Texture2D to OpenCV Mat
+        /// </summary>
+        /// <returns>New mat</returns>
+        /// <param name="texture">Unity texture</param>
+        /// <param name="parameters">Conversion parameters</param>
+        public static Mat TextureToMat(WebCamTexture texture, TextureConversionParams parameters = null)
 		{
 			if (null == parameters)
 				parameters = TextureConversionParams.Default;

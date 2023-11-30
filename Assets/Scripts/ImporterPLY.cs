@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Rendering;
-using System.Linq;
 
-namespace pointcloud_nreal
+namespace plyData
 {
-    class ImporterPLY 
+    class ImporterPLY
     {
+
         public enum DataProperty
         {
             Invalid,
@@ -236,70 +235,7 @@ namespace pointcloud_nreal
 
             return data;
         }
-
-        public List<Vector3> GetVerticesOfPointcloud(string path)
-        {
-            try
-            {
-                var stream = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-                var header = ReadDataHeader(new StreamReader(stream));
-                var body = ReadDataBody(header, new BinaryReader(stream));
-                return body.vertices;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("Failed importing " + path + ". " + e.Message);
-                return null;
-            }
-        }
-
-        public List<Color32> GetColorsOfPointcloud(string path)
-        {
-            try
-            {
-                var stream = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-                var header = ReadDataHeader(new StreamReader(stream));
-                var body = ReadDataBody(header, new BinaryReader(stream));
-                return body.colors;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("Failed importing " + path + ". " + e.Message);
-                return null;
-            }
-        }
-
-        public Mesh ImportAsMesh(string path, List<Vector3> newVertices, List<Color32> newColors)
-        {
-            try
-            {
-                var stream = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-                var header = ReadDataHeader(new StreamReader(stream));
-                var body = ReadDataBody(header, new BinaryReader(stream));
-
-                var mesh = new Mesh();
-                mesh.name = Path.GetFileNameWithoutExtension(path);
-
-                mesh.indexFormat = header.vertexCount > 65535 ?
-                    IndexFormat.UInt32 : IndexFormat.UInt16;
-
-                mesh.SetVertices(newVertices);
-                mesh.SetColors(newColors);
-
-                mesh.SetIndices(
-                    Enumerable.Range(0, header.vertexCount).ToArray(),
-                    MeshTopology.Points, 0
-                );
-
-                mesh.UploadMeshData(true);
-                return mesh;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("Failed importing " + path + ". " + e.Message);
-                return null;
-            }
-        }
-
     }
+
+
 }

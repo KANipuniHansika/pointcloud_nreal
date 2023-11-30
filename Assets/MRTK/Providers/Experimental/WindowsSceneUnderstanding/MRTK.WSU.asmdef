@@ -1,0 +1,22 @@
+{
+    "name": "Microsoft.MixedReality.Toolkit.Providers.WindowsSceneUnderstanding",
+    "references": [
+        "Microsoft.MixedReality.Toolkit",
+        "Microsoft.MixedReality.Toolkit.Async",
+        "Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Shared",
+        "Microsoft.MixedReality.Toolkit.Providers.XRSDK"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor",
+        "WSA"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_2019_4_OR_NEWER"
+    ]
+}

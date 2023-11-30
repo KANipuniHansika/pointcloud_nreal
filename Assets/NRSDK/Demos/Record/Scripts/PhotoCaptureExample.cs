@@ -31,6 +31,7 @@ namespace NRKernal.NRExamples
         private bool isOnPhotoProcess = false;
         GalleryDataProvider galleryDataTool;
 
+
         void Update()
         {
             if (NRInput.GetButtonDown(ControllerButton.TRIGGER))
